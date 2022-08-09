@@ -13,21 +13,21 @@ function runExperiment(sampleSize) {
   //    element for value 2, etc.
   for (let i = 0; i < sampleSize; i++) {
     const randomInteger = Math.ceil(Math.random() * 6);
-    if (randomInteger === 1) {
-      valueCounts[0] += 1;
-    } else if (randomInteger === 2) {
-      valueCounts[1] += 1;
-    }
-    if (randomInteger === 3) {
-      valueCounts[2] += 1;
-    } else if (randomInteger === 4) {
-      valueCounts[3] += 1;
-    }
-    if (randomInteger === 5) {
-      valueCounts[4] += 1;
-    } else if (randomInteger === 6) {
-      valueCounts[5] += 1;
-    }
+    const valueIndex = randomInteger - 1;
+    valueCounts[valueIndex]++;
+    // if (randomInteger === 1) {
+    //   valueCounts[0] += 1;
+    // } else if (randomInteger === 2) {
+    //   valueCounts[1] += 1;
+    // } else if (randomInteger === 3) {
+    //   valueCounts[2] += 1;
+    // } else if (randomInteger === 4) {
+    //   valueCounts[3] += 1;
+    // } else if (randomInteger === 5) {
+    //   valueCounts[4] += 1;
+    // } else if (randomInteger === 6) {
+    //   valueCounts[5] += 1;
+    // }
   }
   const results = [];
 
@@ -41,7 +41,7 @@ function runExperiment(sampleSize) {
   //    two decimals, e.g. '14.60'.
   // 3. Then push that string onto the `results` array.
   for (const value of valueCounts) {
-    const percentage = ((value / sampleSize) * 100).toFixed(2).toString();
+    const percentage = ((value / sampleSize) * 100).toFixed(2);
     results.push(percentage);
   }
   return results;
