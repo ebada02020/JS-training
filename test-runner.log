@@ -184,3 +184,346 @@ Browserslist: caniuse-lite is outdated. Please run:
 2022-08-08 02:25:08 error: *** Spell Checker Report ***
 
 
+2022-08-09 11:25:05 info: ------------------------------------------------------
+2022-08-09 11:25:05 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-08-09 11:25:05 info: ------------------------------------------------------
+2022-08-09 11:25:12 info: All unit tests passed.
+2022-08-09 11:25:18 error: *** Spell Checker Report ***
+
+
+2022-08-09 11:29:41 info: ------------------------------------------------------
+2022-08-09 11:29:41 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-08-09 11:29:41 info: ------------------------------------------------------
+2022-08-09 11:29:47 info: All unit tests passed.
+2022-08-09 11:29:51 error: *** Spell Checker Report ***
+
+
+2022-08-10 12:10:15 info: -------------------------------------------------
+2022-08-10 12:10:15 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-10 12:10:15 info: -------------------------------------------------
+2022-08-10 12:10:22 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (3 ms)
+    ✕ should compute the earnings as a formatted Euro amount (4 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      50 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      51 |     const expected = '€187.50';
+    > 52 |     expect(result).toBe(expected);
+         |                    ^
+      53 |   });
+      54 | });
+      55 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:52:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.96 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-08-10 12:10:25 error: *** Spell Checker Report ***
+
+
+2022-08-10 12:14:54 info: -------------------------------------------------
+2022-08-10 12:14:54 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-10 12:14:54 info: -------------------------------------------------
+2022-08-10 12:15:00 info: All unit tests passed.
+2022-08-10 12:15:03 error: *** Spell Checker Report ***
+
+
+2022-08-10 12:46:24 info: -------------------------------------------------
+2022-08-10 12:46:24 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-08-10 12:46:24 info: -------------------------------------------------
+2022-08-10 12:46:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (2 ms)
+    ✕ should not modify the original `fruitBasket` array (5 ms)
+    ✓ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    If it should pass with deep equality, replace "toBe" with "toStrictEqual"
+
+    Expected: ["apple", "lemon", "grapefruit", "lemon", "banana", "watermelon", "lemon"]
+    Received: serializes to the same string
+
+      58 |     ];
+      59 |
+    > 60 |     expect(result).toBe(expected);
+         |                    ^
+      61 |   });
+      62 |
+      63 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:60:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.085 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2022-08-10 12:46:35 error: *** Spell Checker Report ***
+
+
+2022-08-10 12:48:35 info: -------------------------------------------------
+2022-08-10 12:48:35 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-08-10 12:48:35 info: -------------------------------------------------
+2022-08-10 12:48:41 info: All unit tests passed.
+2022-08-10 12:48:44 error: *** Spell Checker Report ***
+
+
+2022-08-10 03:49:04 info: ------------------------------------------
+2022-08-10 03:49:04 info: >>> Running Unit Test `ex4-observable` <<<
+2022-08-10 03:49:04 info: ------------------------------------------
+2022-08-10 03:49:12 error: *** Unit Test Error Report ***
+
+jest-haste-map: Haste module naming collision: homework
+  The following files share their name; please adjust your hasteImpl:
+    * <rootDir>/1-JavaScript/Week3/homework/package.json
+    * <rootDir>/package.json
+
+
+
+Command failed: npx jest ex4-observable.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  createObservable
+    ✓ should exist and be a function (2 ms)
+    ✓ should return an object with `subscribe` and a `notify` function properties (1 ms)
+    ✕ should notify all subscribers of any notification (3 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 |
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.971 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2022-08-10 03:49:15 error: *** Spell Checker Report ***
+
+
+2022-08-10 03:51:58 info: ------------------------------------------
+2022-08-10 03:51:58 info: >>> Running Unit Test `ex4-observable` <<<
+2022-08-10 03:51:58 info: ------------------------------------------
+2022-08-10 03:52:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  createObservable
+    ✓ should exist and be a function (2 ms)
+    ✓ should return an object with `subscribe` and a `notify` function properties (1 ms)
+    ✕ should notify all subscribers of any notification (4 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 |
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.924 s, estimated 1 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2022-08-10 03:52:06 error: *** Spell Checker Report ***
+
+
+2022-08-10 03:55:10 info: ------------------------------------------
+2022-08-10 03:55:10 info: >>> Running Unit Test `ex4-observable` <<<
+2022-08-10 03:55:10 info: ------------------------------------------
+2022-08-10 03:55:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  createObservable
+    ✓ should exist and be a function (3 ms)
+    ✓ should return an object with `subscribe` and a `notify` function properties (1 ms)
+    ✕ should notify all subscribers of any notification (4 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 |
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        1.005 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2022-08-10 03:55:20 error: *** Spell Checker Report ***
+
+
+2022-08-10 03:59:49 info: ------------------------------------------
+2022-08-10 03:59:49 info: >>> Running Unit Test `ex4-observable` <<<
+2022-08-10 03:59:49 info: ------------------------------------------
+2022-08-10 03:59:56 error: *** Unit Test Error Report ***
+
+console.log
+    Hi!
+
+      at forEach (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.js:25:41)
+          at Array.forEach (<anonymous>)
+
+  console.log
+    Hi!
+
+      at forEach (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.js:25:41)
+          at Array.forEach (<anonymous>)
+
+
+
+Command failed: npx jest ex4-observable.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  createObservable
+    ✓ should exist and be a function (2 ms)
+    ✓ should return an object with `subscribe` and a `notify` function properties (1 ms)
+    ✕ should notify all subscribers of any notification (29 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 |
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.921 s, estimated 1 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2022-08-10 03:59:59 error: *** Spell Checker Report ***
+
+
+2022-08-10 04:01:35 info: ------------------------------------------
+2022-08-10 04:01:35 info: >>> Running Unit Test `ex4-observable` <<<
+2022-08-10 04:01:35 info: ------------------------------------------
+2022-08-10 04:01:44 info: All unit tests passed.
+2022-08-10 04:01:48 error: *** Spell Checker Report ***
+
+
+2022-08-10 06:12:36 info: ------------------------------------------------------
+2022-08-10 06:12:37 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-08-10 06:12:37 info: ------------------------------------------------------
+2022-08-10 06:12:48 info: All unit tests passed.
+2022-08-10 06:12:54 error: *** Spell Checker Report ***
+
+
+2022-08-10 06:21:36 info: -------------------------------------------------
+2022-08-10 06:21:36 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-08-10 06:21:36 info: -------------------------------------------------
+2022-08-10 06:21:44 info: All unit tests passed.
+2022-08-10 06:21:48 error: *** Spell Checker Report ***
+
+
+2022-08-10 06:38:13 info: -------------------------------------------------
+2022-08-10 06:38:13 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-08-10 06:38:13 info: -------------------------------------------------
+2022-08-10 06:38:21 info: All unit tests passed.
+2022-08-10 06:38:26 error: *** Spell Checker Report ***
+
+
+2022-08-10 06:39:11 info: -------------------------------------------------
+2022-08-10 06:39:11 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-08-10 06:39:11 info: -------------------------------------------------
+2022-08-10 06:39:18 info: All unit tests passed.
+2022-08-10 06:39:22 error: *** Spell Checker Report ***
+
+
+2022-08-10 06:46:19 info: -------------------------------------------------
+2022-08-10 06:46:19 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-08-10 06:46:19 info: -------------------------------------------------
+2022-08-10 06:46:26 info: All unit tests passed.
+2022-08-10 06:46:30 error: *** Spell Checker Report ***
+
+
+2022-08-11 12:04:12 info: --------------------------------------
+2022-08-11 12:04:12 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-08-11 12:04:12 info: --------------------------------------
+2022-08-11 12:04:19 info: All unit tests passed.
+2022-08-11 12:04:22 error: *** Spell Checker Report ***
+
+
