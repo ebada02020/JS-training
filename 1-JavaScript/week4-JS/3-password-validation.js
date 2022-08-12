@@ -20,3 +20,26 @@ const passwordList = [
   { times: '1-3', letter: 'b', password: 'cdefg' },
   { times: '2-9', letter: 'c', password: 'ccccccccc' },
 ];
+passwordList.forEach(({ times, letter, password }) => {
+  console.log(times);
+  console.log(letter);
+  console.log(password);
+  const passwordarray = Array.from(password).filter(
+    (letters) => letters === letter
+  );
+  console.log(passwordarray);
+  const minimal = parseInt(times.slice(0, 1));
+  console.log(minimal);
+  const maximal = parseInt(times.slice(2));
+  console.log(maximal);
+  if (passwordarray.length >= minimal && passwordarray.length <= maximal) {
+    console.log(
+      `${password} is VALID, ${letter} is present ${passwordarray.length} times and should have been present at least ${minimal} and at most ${maximal} times`
+    );
+  } else {
+    console.log(
+      `${password} is INVALID, ${letter} is present ${passwordarray.length} times and should have been present at least ${minimal} and at most ${maximal} times`
+    );
+  }
+  console.log('--------------------------');
+});

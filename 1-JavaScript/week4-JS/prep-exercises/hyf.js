@@ -1,5 +1,3 @@
-import { i } from 'html-validate/dist/cjs/core';
-
 export const modules = [
   { name: 'html-css', displayName: 'HTML/CSS' },
   { name: 'javascript', displayName: 'JavaScript' },
@@ -55,7 +53,7 @@ export const students = [
     graduated: false,
   },
 ];
-mentors.forEach((mentor) => mentor.canTeach.includes('jav'));
+
 export const mentors = [
   {
     name: 'Stas',

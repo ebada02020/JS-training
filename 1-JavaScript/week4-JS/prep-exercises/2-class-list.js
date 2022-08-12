@@ -1,4 +1,4 @@
-import { modules, students, mentors, classes } from './hyf';
+import { modules, students, mentors, classes } from './hyf.js';
 
 /**
  * We would like to have a list of everyone that is currently participating in a class.
@@ -13,9 +13,17 @@ import { modules, students, mentors, classes } from './hyf';
  */
 const getPeopleOfClass = (className) => {
   // TODO complete this function
+  const possibleNameStudent = students
+    .filter((student) => student.class.includes(className))
+    .map((student) => student.name);
+  const possibleNameMentor = mentors
+    .filter((mentor) => mentor.nowTeaching)
+    .map((mentor) => mentor.name);
+
+  return { possibleNameStudent, possibleNameMentor };
 };
 // You can uncomment out this line to try your function
-// console.log(getPeopleOfClass('class34'));
+console.log(getPeopleOfClass('class34'));
 
 /**
  * We would like to have a complete overview of the current active classes.
@@ -31,6 +39,9 @@ const getPeopleOfClass = (className) => {
  */
 const getActiveClasses = () => {
   // TODO complete this function
+  //   const activeClass = classes.filter((class) =>
+  // class.active.includes('true'));
+  //   return activeClass
 };
 // You can uncomment out this line to try your function
 // console.log(getActiveClasses());

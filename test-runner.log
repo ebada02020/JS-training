@@ -527,3 +527,17 @@ Ran all test suites matching /ex4-observable.test.js/i.
 2022-08-11 12:04:22 error: *** Spell Checker Report ***
 
 
+2022-08-11 11:09:56 info: --------------------------------------
+2022-08-11 11:09:56 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-08-11 11:09:56 info: --------------------------------------
+2022-08-11 11:10:00 info: All unit tests passed.
+2022-08-11 11:10:04 error: *** Spell Checker Report ***
+
+
+2022-08-11 09:04:25 info: ------------------------------------------
+2022-08-11 09:04:25 info: >>> Running Unit Test `ex4-observable` <<<
+2022-08-11 09:04:25 info: ------------------------------------------
+2022-08-11 09:04:32 info: All unit tests passed.
+2022-08-11 09:04:36 error: *** Spell Checker Report ***
+
+
