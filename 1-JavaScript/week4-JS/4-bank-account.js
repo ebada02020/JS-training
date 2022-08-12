@@ -29,9 +29,34 @@ const bankAccount = {
 
 const donateMoney = (amount, onSuccess, onFail) => {
   // TODO complete this function
+  if (amount) {
+    onSuccess();
+  } else {
+    onFail();
+  }
+  const newAmount = bankAccount.currentBalance + amount;
+  bankAccount.currentBalance = amount + bankAccount.currentBalance;
+  bankAccount.transactions.push({
+    prevAmount: bankAccount.newAmount,
+    newAmount: newAmount,
+    reason: 'Donation',
+  });
+  return bankAccount;
 };
 const payRent = (amount, onSuccess, onFail) => {
   // TODO complete this function
+  if (amount < bankAccount.currentBalance) {
+    onSuccess();
+  } else {
+    onFail();
+  }
+  bankAccount.currentBalance -= amount;
+  bankAccount.transactions.push({
+    prevAmount: bankAccount.currentBalance,
+    newAmount: (bankAccount.newAmount -= amount),
+    reason: 'Rent',
+  });
+  return bankAccount;
 };
 
 /**
@@ -54,12 +79,15 @@ const onFailDutch = () => {
 
 donateMoney(100, onSuccessEnglish, onFailEnglish);
 console.log(bankAccount);
+console.log('--------------------------------------------------');
 
 payRent(100, onSuccessEnglish, onFailEnglish);
 console.log(bankAccount);
+console.log('--------------------------------------------------');
 
 donateMoney(100, onSuccessDutch, onFailDutch);
 console.log(bankAccount);
+console.log('------------------end--------------------------------');
 
 /**
 * The console should print out the following:
