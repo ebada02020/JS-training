@@ -19,15 +19,8 @@
  */
 
 const findVideos = (videoList = [], search = "") => {
-  return videoList.filter((video) => {
-    const titleContainSearch = video.title
-      .toLowerCase()
-      .includes(search.toLowerCase());
-    const tagsContainSearch = video.tags.find((element) => {
-      return element.toLowerCase().includes(search.toLowerCase());
-    });
-    return titleContainSearch || tagsContainSearch;
-  });
+
+  
 };
 
 /**

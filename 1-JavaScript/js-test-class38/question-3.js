@@ -30,21 +30,14 @@ const dbTags = [
  */
 const DEFAULT_COLOR = "#ffffff";
 const extractTags = (videos = []) => {
-  for (const video in videos) {
-    for (const tagName in video.tags) {
-      const isContainTag = dbTags.some((value) => {
-        return value.name.toLowerCase().includes(tagName.toLowerCase());
-      });
-      if (isContainTag === false) {
-        const newTag = {
-          id: "t---" + tagName,
-          name: tagName,
-          color: DEFAULT_COLOR,
-        };
-        dbTags.push(newTag);
-      }
-    }
-  }
+  // for each video:
+
+  // for each tag in the video:
+
+  // if the dbTags array does not contain an element with the tag
+  
+  // add a new tag that has a unique id, a name property that contains the tag and a color property that contains the DEFAULT_COLOR
+
 };
 
 /**

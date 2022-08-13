@@ -8,10 +8,8 @@
  * - The array needs to have at least 1 item that has the `views` property set to 0
  * - The array needs to have at least 1 item that has the `views` property set to 22
  */
-const videos = [
-  { description: "JavaScript for Beginners", views: 0 },
-  { description: "C# for Beginners", views: 22 },
-];
+
+
 
 /**
  * TEST CODE. DO NOT EDIT

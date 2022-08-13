@@ -28,8 +28,6 @@ const combineAndDeduplicate = (firstArr, secondArr) => {
   // This syntax will be new to you, it is a quick way to remove any duplicates from the newArray
   return [...new Set(newArray)];
 };
-console.log(combineAndDeduplicate([2,2,3,4,5,6,7,85,2,4], [2,3,54,67,7,8,32,1,2]));
-
 
 /**
  * TEST CODE: ONLY EDIT THIS
@@ -39,7 +37,6 @@ console.log(combineAndDeduplicate([2,2,3,4,5,6,7,85,2,4], [2,3,54,67,7,8,32,1,2]
  */
 describe("combineAndDeduplicate", () => {
   it("", () => {
-    expect(combineAndDeduplicate([2,2,3,4,5,6,7,85,2,4], [2,3,54,67,7,8,32,1,2])).toEqual([2,	3,	4,	5,	6,	7,	85,	54,	67,	8,	32,	1,]);
-
+    expect(false).toBe(true);
   });
 });

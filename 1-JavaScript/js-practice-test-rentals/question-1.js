@@ -10,7 +10,7 @@
  */
 const rentals = [{description:"Cosy cottage by the lake",isAvailable:true,},{description:"Luxury apartment in the city",isAvailable:false,}];
 
-
+const rentals 
 /**
  * TEST CODE. DO NOT EDIT
  */

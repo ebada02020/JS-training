@@ -28,12 +28,8 @@
  */
 
 const recommendedNextVideo = (users = [], videos = [], userId = null) => {
-
-  const usersArray = users.map((id, favoritedVideoIds)=> [{id,favoritedVideoIds}] )
   // find the tags of the favourited videos
-
-
-  const favourited = tags.name.find();
+  
 
   // create a list of videos that the user has not seen yet!
   
@@ -42,7 +38,7 @@ const recommendedNextVideo = (users = [], videos = [], userId = null) => {
   
 
   // return the most favorite video id! (So not the whole object, but just the id)
-  return favoritedVideoIds;
+  
 };
 
 /**
