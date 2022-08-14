@@ -18,7 +18,7 @@
  * And the search string `gram` should also match the video with the title that includes `Programming`
  */
 
-const findVideos = (videoList = [], search = "") => {
+const findVideos = (videoList = [], search = '') => {
   const searchString = search.toLowerCase();
 
   return videoList.filter((video) => {
@@ -34,26 +34,26 @@ const findVideos = (videoList = [], search = "") => {
  */
 const videos = [
   {
-    id: "v---1",
-    title: "JavaScript for Beginners",
-    tags: ["Programming", "JavaScript"],
+    id: 'v---1',
+    title: 'JavaScript for Beginners',
+    tags: ['Programming', 'JavaScript'],
   },
   {
-    id: "v---2",
-    title: "C# for Beginners",
-    tags: ["Programming", "C#"],
+    id: 'v---2',
+    title: 'C# for Beginners',
+    tags: ['Programming', 'C#'],
   },
   {
-    id: "v---3",
-    title: "Cute panda begins to fall over",
-    tags: ["Panda", "Animal"],
+    id: 'v---3',
+    title: 'Cute panda begins to fall over',
+    tags: ['Panda', 'Animal'],
   },
 ];
 
 console.assert(findVideos(videos).length === 3);
-console.assert(findVideos(videos, "Programming").length === 2);
-console.assert(findVideos(videos, "JavaScript").length === 1);
-console.assert(findVideos(videos, "Animal").length === 1);
-console.assert(findVideos(videos, "beginners").length === 2);
-console.assert(findVideos(videos, "begin").length === 3);
-console.assert(findVideos([], "Animal").length === 0);
+console.assert(findVideos(videos, 'Programming').length === 2);
+console.assert(findVideos(videos, 'JavaScript').length === 1);
+console.assert(findVideos(videos, 'Animal').length === 1);
+console.assert(findVideos(videos, 'beginners').length === 2);
+console.assert(findVideos(videos, 'begin').length === 3);
+console.assert(findVideos([], 'Animal').length === 0);

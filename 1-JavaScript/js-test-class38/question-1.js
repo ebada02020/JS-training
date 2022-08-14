@@ -8,8 +8,10 @@
  * - The array needs to have at least 1 item that has the `views` property set to 0
  * - The array needs to have at least 1 item that has the `views` property set to 22
  */
-
-
+const videos = [
+  { description: 'JavaScript for Beginners', views: 0 },
+  { description: 'Cute panda begins to fall over', views: 22 },
+];
 
 /**
  * TEST CODE. DO NOT EDIT
@@ -18,5 +20,5 @@ console.assert(videos.some((video) => video.views === 0));
 console.assert(videos.some((video) => video.views === 22));
 
 videos.forEach((video) => {
-  console.assert(typeof video.description === "string");
+  console.assert(typeof video.description === 'string');
 });

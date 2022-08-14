@@ -8,9 +8,9 @@
 /** DO NOT EDIT THE TAGS ARRAY MANUALLY! THIS IS MIMICING YOUR DATABASE **/
 const dbTags = [
   {
-    id: "t---1",
-    name: "Programming",
-    color: "#c4ef00",
+    id: 't---1',
+    name: 'Programming',
+    color: '#c4ef00',
   },
 ];
 /** DO NOT EDIT THE TAGS ARRAY MANUALLY! THIS IS MIMICING YOUR DATABASE **/
@@ -28,16 +28,27 @@ const dbTags = [
  *
  * Then per tag in the array, check if there is already a tag in `dbTags`, if not then add it and generate a new id and give it the default colour!
  */
-const DEFAULT_COLOR = "#ffffff";
+const DEFAULT_COLOR = '#ffffff';
 const extractTags = (videos = []) => {
+  videos.forEach((video) => {
+    video.tags.forEach((tag) => {
+      if (!dbTags.some((dbTag) => dbTag.name === tag)) {
+        dbTags.push({
+          id: `t---${dbTags.length + 1}`,
+          name: tag,
+          color: DEFAULT_COLOR,
+        });
+      }
+    });
+  });
+
   // for each video:
 
   // for each tag in the video:
 
   // if the dbTags array does not contain an element with the tag
-  
-  // add a new tag that has a unique id, a name property that contains the tag and a color property that contains the DEFAULT_COLOR
 
+  // add a new tag that has a unique id, a name property that contains the tag and a color property that contains the DEFAULT_COLOR
 };
 
 /**
@@ -45,28 +56,28 @@ const extractTags = (videos = []) => {
  */
 const testVideos = [
   {
-    id: "v---1",
-    title: "JavaScript for Beginners",
-    tags: ["Programming", "JavaScript"],
+    id: 'v---1',
+    title: 'JavaScript for Beginners',
+    tags: ['Programming', 'JavaScript'],
   },
   {
-    id: "v---2",
-    title: "C# for Beginners",
-    tags: ["Programming", "C#"],
+    id: 'v---2',
+    title: 'C# for Beginners',
+    tags: ['Programming', 'C#'],
   },
   {
-    id: "v---3",
-    title: "Cute panda begins to fall over",
-    tags: ["Panda", "Animal"],
+    id: 'v---3',
+    title: 'Cute panda begins to fall over',
+    tags: ['Panda', 'Animal'],
   },
 ];
 extractTags(testVideos);
-console.assert(dbTags.length === 5, "Should be 5 tags!");
+console.assert(dbTags.length === 5, 'Should be 5 tags!');
 console.assert(
   [...new Set(dbTags.map((dbTag) => dbTag.id))].length === 5,
-  "All tag ids should be unique!"
+  'All tag ids should be unique!'
 );
 console.assert(
   [...new Set(dbTags.map((dbTag) => dbTag.name))].length === 5,
-  "All tag names should be unique!"
+  'All tag names should be unique!'
 );
